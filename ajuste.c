@@ -27,3 +27,20 @@ void coeficientes(double x1[n], double y1[n])
 
 	printf("\n a1=%lf \n a0=%lf \n", a1, a0);
 }
+int main(int argc, char *argv[])
+{
+	int i;
+	double x1[n], y1[n];
+
+	arq=fopen(argv[1], "r");
+
+	// lendo dados
+	for(i=0; i<n; i++)
+		fscanf(arq, "%lf%lf, &x1[i], &y1[i]);
+
+	// imprimindo dados
+	for(i=0; i<n; i++)
+		printf(" x=%.1lf\t y=%.1lf \n", x1[i], y1[i]);
+
+	coeficientes(s1, y1);
+}
