@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-FILE *arquivo;
+FILE *arq;
 #define n 10
 
 void coeficientes(double x1[n], double y1[n])
@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
 
 	// lendo dados
 	for(i=0; i<n; i++)
-		fscanf(arq, "%lf%lf, &x1[i], &y1[i]);
+		fscanf(arq, "%lf%lf", &x1[i], &y1[i]);
 
 	// imprimindo dados
 	for(i=0; i<n; i++)
 		printf(" x=%.1lf\t y=%.1lf \n", x1[i], y1[i]);
 
-	coeficientes(s1, y1);
+	coeficientes(x1, y1);
 }
